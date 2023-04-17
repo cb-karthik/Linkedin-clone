@@ -1,19 +1,21 @@
-import React  from "react";
+import React from "react";
 import "./Posts.css";
 import { Avatar } from "@mui/material";
 import InputOption from "./InputOption";
-import ThumbUpAltOutlinedIcon from '@mui/icons-material/ThumbUpAltOutlined';
-import ChatOutlinedIcon from '@mui/icons-material/ChatOutlined';
-import ShareOutlinedIcon from '@mui/icons-material/ShareOutlined';
-import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
+import ThumbUpAltOutlinedIcon from "@mui/icons-material/ThumbUpAltOutlined";
+import ChatOutlinedIcon from "@mui/icons-material/ChatOutlined";
+import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
+import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
 import { forwardRef } from "react";
 
-const Posts= forwardRef(({ name, description, message, photoUrl }, ref) => {
-  
-    return (
+const Posts = forwardRef(({ name, description, message, photoUrl }, ref) => {
+ 
+  return (
     <div ref={ref} className="post">
       <div className="post_header">
-      <Avatar src={photoUrl}> {name ? name[0] : "K"}</Avatar>
+         {/* <Avatar src={photoUrl}></Avatar> */}
+         <Avatar src={photoUrl}> { name? name[0]: "z"}</Avatar>
+         {/* <Avatar src={photoUrl}> {name[0]}</Avatar> */}
         <div className="post_info">
           <h2>{name}</h2>
           <p>{description}</p>
@@ -24,13 +26,12 @@ const Posts= forwardRef(({ name, description, message, photoUrl }, ref) => {
       </div>
 
       <div className="post_buttons">
-        <InputOption Icon={ThumbUpAltOutlinedIcon} title="Like" color="gray"/>
-        <InputOption Icon={ChatOutlinedIcon} title="Comment" color="gray"/>
-        <InputOption Icon={ShareOutlinedIcon} title="Share" color="gray"/>
-        <InputOption Icon={SendOutlinedIcon} title="Send" color="gray"/>
+        <InputOption Icon={ThumbUpAltOutlinedIcon} title="Like" color="gray" />
+        <InputOption Icon={ChatOutlinedIcon} title="Comment" color="gray" />
+        <InputOption Icon={ShareOutlinedIcon} title="Share" color="gray" />
+        <InputOption Icon={SendOutlinedIcon} title="Send" color="gray" />
       </div>
     </div>
   );
-}
-)
+});
 export default Posts;

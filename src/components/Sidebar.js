@@ -24,7 +24,8 @@ function Sidebar() {
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKJk3MXVw7g43iJyQBJGrd4YwGB8-4-6xtko_WcfD0bg&usqp=CAU&ec=48665701"
           alt="user_background"
         />
-        <Avatar src={user.photoUrl} className="sidebar_avatar">{user.email[0]} </Avatar>
+        
+        <Avatar src={user.photoUrl} className="sidebar_avatar"> {user.email[0]} </Avatar>
         <h2>{user.displayName}</h2>
         <h4>{user.email}</h4>
       </div>

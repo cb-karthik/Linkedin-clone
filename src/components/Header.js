@@ -8,8 +8,9 @@ import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import ChatIcon from "@mui/icons-material/Chat";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import { useDispatch} from "react-redux";
-import { logout} from "../features/userSlice";
+import { logout,} from "../features/userSlice";
 import { auth} from "./Firebase";
+
 
 function Header() {
 
@@ -40,7 +41,7 @@ function Header() {
         <Headeroptions Icon={NotificationsIcon} title="Notification" />
         <Headeroptions avatar={true}
          
-          title="Me"
+          title="Log-out"
           onClick={logOutOfApp} 
           />
        

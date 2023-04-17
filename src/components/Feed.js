@@ -40,15 +40,7 @@ function Feed() {
 
     return unsubscribe;
 
-    // onSnapshot is real time listner
-    // db.collection("posts").onSnapshot((snapshot) =>
-    //   setPosts(
-    //     snapshot.docs.map((doc) => ({
-    //       id: doc.id,
-    //       data: doc.data(),
-    //     }))
-    //   )
-    // );
+   
   }, []);
 
   const sendPost = (e) => {
@@ -58,8 +50,8 @@ function Feed() {
       name: user.displayName,
       description: user.email,
       message: input,
-      photoUrl: user.photoUrl,
-      timestamp: serverTimestamp() || "",
+      photoUrl: user.photoUrl || "",
+      timestamp: serverTimestamp() ,
     });
 
     // db.collection("posts").add({
@@ -71,6 +63,8 @@ function Feed() {
     // });
     setInput("");
   };
+
+  console.log(posts);
 
   return (
     <div className="feed">
@@ -107,7 +101,7 @@ function Feed() {
             name={name}
             description={description}
             message={message}
-            phototUrl={photoUrl}
+            photoUrl={photoUrl}
           />
         ))}
       </FlipMove>
