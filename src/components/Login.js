@@ -3,7 +3,11 @@ import "./Login.css";
 import { auth } from "./Firebase";
 import { useDispatch } from "react-redux";
 import { login } from "../features/userSlice";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  updateProfile,
+} from "firebase/auth";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -16,19 +20,18 @@ function Login() {
   const loginToApp = (e) => {
     e.preventDefault();
 
-
-    signInWithEmailAndPassword(auth,email,password)
-    .then(userAuth => {
-        dispatch(login({
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userAuth) => {
+        dispatch(
+          login({
             email: userAuth.user.email,
             uid: userAuth.user.uid,
             displayName: userAuth.user.displayName,
             photoUrl: userAuth.user.photoURL,
-        }))
-    }).catch((error)=> alert(error));
-
-
-
+          })
+        );
+      })
+      .catch((error) => alert(error));
   };
   const register = () => {
     if (!name) {
@@ -36,6 +39,9 @@ function Login() {
     }
     createUserWithEmailAndPassword(auth, email, password)
       .then((userAuth) => {
+        console.log(auth.currentUser);
+        console.log(name);
+        console.log(profilePic);
         updateProfile(auth.currentUser, {
           displayName: name,
           photoURL: profilePic,

@@ -43,6 +43,8 @@ function Feed() {
    
   }, []);
 
+  console.log(user);
+
   const sendPost = (e) => {
     e.preventDefault();
 
