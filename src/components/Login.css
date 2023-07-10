@@ -35,7 +35,7 @@ body {
 }
 
 .login > form > button {
-  width: 375px;
+  width: 360px;
   height: 40px;
   font-size: large;
   color: #fff;
@@ -50,6 +50,11 @@ body {
 
 .login > p {
   margin-top: 20px;
+}
+
+.login__hint  {
+  font-size: 15px;
+ color: gray;
 }
 
 /* Media Queries */

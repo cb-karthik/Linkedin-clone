@@ -105,6 +105,9 @@ function Login() {
           Register Now!!
         </span>
       </p>
+      <p className="login__hint">Try <span>Email: musk@gmail.com and password:123456</span>
+      </p>
+      
     </div>
   );
 }
