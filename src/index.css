@@ -17,19 +17,3 @@ code {
     monospace;
 }
 
-/* Responsive Styles */
-
-/* Small screens */
-@media (max-width: 480px) {
-  /* Add your responsive styles for small screens here */
-}
-
-/* Medium screens */
-@media (min-width: 481px) and (max-width: 768px) {
-  /* Add your responsive styles for medium screens here */
-}
-
-/* Large screens */
-@media (min-width: 769px) {
-  /* Add your responsive styles for large screens here */
-}
