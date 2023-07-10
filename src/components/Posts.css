@@ -1,32 +1,51 @@
-.post{
+.post {
     background-color: white;
     padding: 15px;
     margin-bottom: 10px;
     border-radius: 10px;
-}
-
-.post_header{
+  }
+  
+  .post_header {
     display: flex;
     margin-bottom: 10px;
     font-size: 10px;
-}
-
-.post_info{
+  }
+  
+  .post_info {
     margin-left: 10px;
-}
-
-.post_info>p{
+  }
+  
+  .post_info > p {
     font-size: 12px;
     color: gray;
-}
-
-.post_body{
+  }
+  
+  .post_body {
     overflow-wrap: anywhere;
-    
-}
-
-.post_buttons{
+  }
+  
+  .post_buttons {
     display: flex;
     justify-content: space-evenly;
-    
-}
+  }
+  
+  /* Responsive Styles */
+  
+  @media (max-width: 480px) {
+    .post {
+      padding: 10px;
+    }
+  
+    .post_header {
+      font-size: 8px;
+    }
+  
+    .post_info {
+      margin-left: 5px;
+    }
+  
+    .post_info > p {
+      font-size: 10px;
+    }
+  }
+  

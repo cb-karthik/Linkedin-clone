@@ -5,13 +5,27 @@
     color: gray;
     padding: 10px;
     cursor: pointer;
-} 
-
-.inputoption:hover{
+  }
+  
+  .inputoption:hover {
     background-color: whitesmoke;
     border-radius: 10px;
-}
-
-.inputoption > h4{
+  }
+  
+  .inputoption > h4 {
     margin-left: 5px;
-}
+  }
+  
+  /* Responsive Styles */
+  
+  @media (max-width: 480px) {
+    .inputoption {
+      font-size: 14px;
+      padding: 8px;
+    }
+    
+    .inputoption > h4 {
+      margin-left: 3px;
+    }
+  }
+  
